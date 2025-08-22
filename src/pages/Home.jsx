@@ -38,9 +38,9 @@ const Home = () => {
             <TypeWriter />
           </div>
           {/*Button goes here */}
-            <div className="relative mt-10 w-44 h-11 ">
-  {/* Click me note - Top-Right of Button */}
-  <div>
+          <div className="relative mt-10 w-44 h-11 ">
+        {/* Click me note - Top-Right of Button */}
+        <div>
     <motion.span
       className="dark:text-white text-green-600 text-xl font-bold absolute -top-8 -right-20"
       style={{ fontFamily: "'Caveat', cursive"  }}
@@ -66,7 +66,7 @@ const Home = () => {
 
   {/* Main Button */}
   <button className="bg-teal-400 text-black px-5 py-1 rounded-full text-lg font-semibold hover:bg-teal-500 transition">
-    Let's connect!
+   <a href="#footer"> Let's connect! </a>
   </button>
 
   {/* Contact Me link */}
