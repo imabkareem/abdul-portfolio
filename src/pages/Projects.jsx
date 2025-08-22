@@ -15,15 +15,15 @@ const projects = [
     desc: "AvonThreads is a modern full-stack e-commerce platform for fashion and footwear shopping. It offers features like user authentication, product search and filtering, cart management, and a secure checkout. Admins can manage inventory, track orders, and update product listings via a dedicated dashboard.",
     tech: "MERN,JWT,Redux",
     link: "https://github.com/yourusername/tailor-booking",
-    live: "https://tailor-booking.vercel.app",
+    live: "https://AvonThread.vercel.app",
    
   },
   {
     title: "Portfolio Website",
     desc: "A dynamic portfolio built with React, Framer Motion, and EmailJS for contact.",
     tech: "React, Framer Motion, EmailJS",
-    link: "https://github.com/yourusername/portfolio",
-    live: "https://abdulkareem.vercel.app",
+    link: "https://github.com/imabkareem/abdul-portfolio",
+    live: "https://imabkareem.vercel.app",
    
   },
   {
