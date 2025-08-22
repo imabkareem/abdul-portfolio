@@ -121,7 +121,7 @@ const About = () => {
           viewport={{ once: true }}
         >
           <a
-            href="/AbdulKareem_Resume.pdf" // Update with your real resume file path
+            href="https://drive.google.com/file/d/1VrG9fmB71jbBILqh-16dGD_kcSCwQZXM/view?usp=sharing" // Update with your real resume file path
             download
             className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-2 rounded-full  hover:bg-indigo-700 transition"
           >
