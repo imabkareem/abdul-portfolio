@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="left-0 right-0  flex flex-col md:flex-row items-center justify-between gap-4 text-center py-6 mt-10 px-6 border-t border-gray-200 dark:border-gray-700">
+    <footer  id="footer" className="left-0 right-0  flex flex-col md:flex-row items-center justify-between gap-4 text-center py-6 mt-10 px-6 border-t border-gray-200 dark:border-gray-700">
       {/* Social Icons */}
       <div className="flex space-x-4">
         <a
