@@ -13,7 +13,7 @@ const Footer = () => {
       {/* Social Icons */}
       <div className="flex space-x-4">
         <a
-          href="https://linkedin.com/in/your-profile"
+          href="https://linkedin.com/in/imabkareem"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition"
@@ -21,7 +21,7 @@ const Footer = () => {
           <FaLinkedinIn size={20} />
         </a>
         <a
-          href="https://github.com/your-profile"
+          href="https://github.com/imabkareem"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition"
@@ -29,7 +29,7 @@ const Footer = () => {
           <FaGithub size={20} />
         </a>
         <a
-          href="https://instagram.com/your-profile"
+          href="https://instagram.com/imabkareem"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-600 dark:text-gray-300 hover:text-pink-500 transition"
@@ -37,7 +37,7 @@ const Footer = () => {
           <FaInstagram size={20} />
         </a>
         <a
-          href="https://x.com/your-profile"
+          href="https://x.com/imabkareem"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-600 dark:text-gray-300 hover:text-blue-500 transition"
@@ -45,7 +45,7 @@ const Footer = () => {
           <FaXTwitter size={20} />
         </a>
         <a
-          href="https://dev.to/your-profile"
+          href="https://dev.to/imabkareem"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition"
