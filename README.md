@@ -1,6 +1,6 @@
 # 🌐 Abdul's Portfolio
 
-🔗 **Visit My Portfolio**: [https://your-live-link.com](https://imabkareem.vercel.app)
+🔗 **Visit My Portfolio**: [Click me.](https://imabkareem.vercel.app)
 
 This is my **personal portfolio website** built with **React 19, Vite, and Tailwind CSS**.  
 It showcases my skills, projects, and provides an easy way to connect with me.
