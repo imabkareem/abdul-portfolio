@@ -104,8 +104,3 @@ abdulportfoli/
 ## 📜 License
 
 This project is **MIT Licensed**. Feel free to use it and customize for your own portfolio.
-
-```
-
-Do you want me to also **write badges** (like React, Vite, Tailwind, etc.) at the top of your README for a more professional look?
-```
