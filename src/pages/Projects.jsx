@@ -7,7 +7,7 @@ const projects = [
     desc: "eCholestroCare is a health-focused web application that provides automatic prescriptions and lifestyle suggestions based on user cholesterol levels. Using doctor-defined rules, it analyzes reports, generates tailored prescription.",
     tech: "MEN,EJS,Tailwind,JWT,Nodemailer",
     link: "https://github.com/imabkareem/echolestrol",
-    live: "https://e-cholestrol.render.app",
+    live: "https://e-cholestrocare.onrender.com",
    
   },
   {
