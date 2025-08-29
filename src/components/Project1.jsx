@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const projects = [
   {
     title: "eCholestroCare",
-    desc: "A health app that automatically provides prescriptions and suggestions based on cholesterol levels using doctor-defined rules, and generates a prescription report.",
+    desc: "A health app that automatically provides prescriptions and suggestions based on cholesterol levels using doctor-defined rules, and generates a prescription.",
   },
   {
     title: "AvonThreads",
