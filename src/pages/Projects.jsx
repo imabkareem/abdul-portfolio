@@ -15,7 +15,7 @@ const projects = [
     desc: "AvonThreads is a modern full-stack e-commerce platform. It offers features like user authentication, product search and filtering, cart management, and a secure checkout. Admins can manage inventory, track orders, and update product listings via a dedicated dashboard.",
     tech: "MERN,Tailwind,JWT,Redux",
     link: "https://github.com/imabkareem/AvonThread",
-    live: "https://avonthread.onrender.com,
+    live: "https://avonthread.onrender.com",
    
   },
   {
