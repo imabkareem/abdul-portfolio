@@ -4,18 +4,18 @@ import { motion } from "framer-motion";
 const projects = [
   {
     title: "eCholestroCare: Automated Rule-Based Prescription Web Application",
-    desc: "eCholestroCare is a health-focused web application that provides automatic prescriptions and lifestyle suggestions based on user cholesterol levels. Using doctor-defined rules, it analyzes reports, generates tailored advice.",
+    desc: "eCholestroCare is a health-focused web application that provides automatic prescriptions and lifestyle suggestions based on user cholesterol levels. Using doctor-defined rules, it analyzes reports, generates tailored prescription.",
     tech: "MEN,EJS,Tailwind,JWT,Nodemailer",
     link: "https://github.com/imabkareem/echolestrol",
-    live: "https://cholesterol-app.vercel.app",
+    live: "https://e-cholestrol.render.app",
    
   },
   {
     title: "AvonThreads: E-commerce Web Application",
-    desc: "AvonThreads is a modern full-stack e-commerce platform for fashion and footwear shopping. It offers features like user authentication, product search and filtering, cart management, and a secure checkout. Admins can manage inventory, track orders, and update product listings via a dedicated dashboard.",
-    tech: "MERN,JWT,Redux",
-    link: "https://github.com/yourusername/tailor-booking",
-    live: "https://AvonThread.vercel.app",
+    desc: "AvonThreads is a modern full-stack e-commerce platform. It offers features like user authentication, product search and filtering, cart management, and a secure checkout. Admins can manage inventory, track orders, and update product listings via a dedicated dashboard.",
+    tech: "MERN,Tailwind,JWT,Redux",
+    link: "https://github.com/imabkareem/AvonThread",
+    live: "https://avonthread.onrender.com,
    
   },
   {
