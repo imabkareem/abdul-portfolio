@@ -27,8 +27,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
   e.preventDefault();
 
-  setSending(true);    
-  setSubmitted(false); 
+  setSending(true);
 
   try {
     // 1. Upload files to Cloudinary
