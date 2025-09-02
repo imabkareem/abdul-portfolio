@@ -20,14 +20,19 @@ const Contact = () => {
    const [name, setName] = useState("");
   const [email,setEmail] =useState("");
   const [files, setFiles] = useState([]);
+  const [sending, setSending] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   
   
-    const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
   e.preventDefault();
+
+  setSending(true);    
+  setSubmitted(false); 
 
   try {
     // 1. Upload files to Cloudinary
-    const uploadPromises = files.map(async(file) => {
+    const uploadPromises = files.map(async (file) => {
       const data = new FormData();
       data.append("file", file);
       data.append("upload_preset", UPLOAD_PRESET);
@@ -40,23 +45,23 @@ const Contact = () => {
 
     const uploadResults = await Promise.all(uploadPromises);
     const fileUrls = uploadResults.map((res) => res.secure_url);
-    console.log(fileUrls)
-    
-   const formattedLinks = fileUrls.map(
-  (url) => `${url}`).join(", ");
+    console.log(fileUrls);
 
-const message = `
-  Messegae:${message1} and Liks:
-  ${formattedLinks}`;
+    const formattedLinks = fileUrls.join(", ");
 
-const templateParams = {
-  name,
-  email,
-  message,
-  time: new Date().toLocaleString(),
-};
+    const message = `
+      Message: ${message1} 
+      Links: ${formattedLinks}
+    `;
 
+    const templateParams = {
+      name,
+      email,
+      message,
+      time: new Date().toLocaleString(),
+    };
 
+    // 2. Send via EmailJS
     await emailjs.send(
       EMAILJS_SERVICE_ID,
       EMAILJS_TEMPLATE_ID,
@@ -64,16 +69,24 @@ const templateParams = {
       EMAILJS_PUBLIC_KEY
     );
 
-     alert("Message sent successfully!");
+    setSubmitted(true);   
+    setSending(false);    
 
-    // 3. Reset form
+    // Reset back after 3s
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 3000);
+
+    // 3. Reset form fields
     setName("");
     setEmail("");
     setMessage("");
     setFiles([]);
+
   } catch (error) {
     console.error("Failed to send message:", error);
     alert("Something went wrong. Try again later.");
+    setSending(false); // allow retry
   }
 };
 
@@ -199,14 +212,23 @@ const templateParams = {
 
   {/* Submit Button */}
   <motion.button
-    type="submit"
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300"
-  >
-    <FaPaperPlane />
-    Send Message
-  </motion.button>
+        type="submit"
+        disabled={sending}
+        whileHover={{ scale: sending ? 1 : 1.05 }}
+        whileTap={{ scale: sending ? 1 : 0.95 }}
+        className={`w-full flex items-center justify-center gap-2 px-6 py-3 font-semibold rounded-lg shadow-md transition-all duration-300
+          ${sending || submitted 
+            ? "bg-gray-400 cursor-not-allowed text-white" 
+            : "bg-indigo-600 hover:bg-indigo-700 text-white"
+          }`}
+      >
+        <FaPaperPlane />
+        {sending 
+          ? "Sending..." 
+          : submitted 
+            ? "Sent!" 
+            : "Send Message"}
+      </motion.button>
 </motion.form>
 
       </div>
