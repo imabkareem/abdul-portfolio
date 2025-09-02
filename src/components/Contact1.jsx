@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaArrowUp,FaPaperclip } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
+import emailjs from "@emailjs/browser";
 
 const CLOUD_NAME = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
 const UPLOAD_PRESET = import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET;
