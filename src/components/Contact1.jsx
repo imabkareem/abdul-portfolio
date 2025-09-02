@@ -40,7 +40,7 @@ const Contact1 = () => {
 
       const uploadResults = await Promise.all(uploadPromises);
       
-      const fileUrls = uploadResults.map((res) => res.secure_url);
+      const fileUrls = uploadResults.map((res) => res.secure_url.replace("/upload/", "/upload/fl_attachment/"));
       
 
       const formattedLinks = fileUrls.join(", ");
