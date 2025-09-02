@@ -185,10 +185,15 @@ const Contact1 = () => {
 
           <button
             type="submit"
-            className="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700 transition"
+            disabled={submitted}   
+            className={`px-6 py-2 rounded transition 
+            ${submitted 
+              ? "bg-gray-400 cursor-not-allowed"   
+              : "bg-indigo-600 text-white hover:bg-indigo-700"
+            }`}
           >
-            Send
-          </button>
+          {submitted ? "Sending..." : "Send"}
+        </button>
         </motion.form>
 
         {/* Success Message */}
