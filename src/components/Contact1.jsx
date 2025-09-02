@@ -69,8 +69,12 @@ const Contact1 = () => {
       setMessage("");
       setName("");
       setEmail("");
-      setTimeout(() => setSubmitted(false), 3000);
-      setTimeout(() => sending(false), 1000);
+      setTimeout(() =>{
+           setSubmitted(false);
+           setSending(false);
+      }
+      , 3000);
+      
       
     } catch (error) {
       console.error("Failed to send message:", error);
@@ -188,16 +192,16 @@ const Contact1 = () => {
           )}
 
         <button
-        type="submit"
-        disabled={sending}
-        className={`px-6 py-2 rounded transition 
-        ${sending 
-          ? "bg-gray-400 cursor-not-allowed" 
-          : "bg-indigo-600 text-white hover:bg-indigo-700"
-        }`}
-        >
-        {sending ? "Sending..." : "Send"}
-        </button>
+          type="submit"
+          disabled={sending}
+          className={`px-6 py-2 rounded transition 
+          ${sending 
+            ? "bg-gray-400 cursor-not-allowed" 
+            : "bg-indigo-600 text-white hover:bg-indigo-700"
+            }`}
+            >
+            {sending ? "Sending..." : submitted ? "Sent!" : "Send"}
+          </button>
         </motion.form>
 
         {/* Success Message */}
