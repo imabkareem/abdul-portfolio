@@ -14,13 +14,19 @@ const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
 const Contact1 = () => {
   const [submitted, setSubmitted] = useState(false);
-  const [message, setMessage] = useState("");
-const [files, setFiles] = useState([]);
-
+  const [message1, setMessage] = useState("");
+   const [name, setName] = useState("");
+  const [email,setEmail] =useState("");
+  const [files, setFiles] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can integrate EmailJS or another service here
+
+
+
+
+    
+   
     setSubmitted(true);
     setFiles([]);
     setTimeout(() => setSubmitted(false), 3000); // Reset message after 3s
