@@ -3,6 +3,13 @@ import { motion } from "framer-motion";
 import { FaArrowUp,FaPaperclip } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 
+const CLOUD_NAME = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+const UPLOAD_PRESET = import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET;
+
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+
 
 const Contact1 = () => {
   const [submitted, setSubmitted] = useState(false);
