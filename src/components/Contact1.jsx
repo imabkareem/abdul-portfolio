@@ -28,7 +28,7 @@ const Contact1 = () => {
         data.append("upload_preset", UPLOAD_PRESET);
 
         return await fetch(
-          `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/upload`,
+          `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/auto/upload`,
           {
             method: "POST",
             body: data,
@@ -145,7 +145,6 @@ const Contact1 = () => {
                 const newFiles = Array.from(e.target.files);
                 setFiles((prevFiles) => {
                   const allFiles = [...prevFiles, ...newFiles];
-                  // Remove duplicates by name
                   const uniqueFiles = allFiles.filter(
                     (file, index, self) =>
                       index === self.findIndex((f) => f.name === file.name)
