@@ -28,7 +28,7 @@ const Contact1 = () => {
         data.append("upload_preset", UPLOAD_PRESET);
 
         return await fetch(
-          `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/auto/upload`,
+          `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/raw/upload`,
           {
             method: "POST",
             body: data,
@@ -37,7 +37,9 @@ const Contact1 = () => {
       });
 
       const uploadResults = await Promise.all(uploadPromises);
+      
       const fileUrls = uploadResults.map((res) => res.secure_url);
+      
 
       const formattedLinks = fileUrls.join(", ");
 
