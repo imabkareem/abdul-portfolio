@@ -16,11 +16,13 @@ const Contact1 = () => {
   const [message1, setMessage] = useState("");
   const [files, setFiles] = useState([]);
   const [name, setName] = useState(""); 
-  const [email, setEmail] = useState(""); 
+  const [email, setEmail] = useState("");
+  const [sending, setSending] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+       setSending(true);// button will sho sending 
       // 1. Upload files to Cloudinary
       const uploadPromises = files.map(async (file) => {
         const data = new FormData();
@@ -28,7 +30,7 @@ const Contact1 = () => {
         data.append("upload_preset", UPLOAD_PRESET);
 
         return await fetch(
-          `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/raw/upload`,
+          `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/auto/upload`,
           {
             method: "POST",
             body: data,
@@ -183,16 +185,16 @@ const Contact1 = () => {
             </div>
           )}
 
-          <button
-            type="submit"
-            disabled={submitted}   
-            className={`px-6 py-2 rounded transition 
-            ${submitted 
-              ? "bg-gray-400 cursor-not-allowed"   
-              : "bg-indigo-600 text-white hover:bg-indigo-700"
-            }`}
-          >
-          {submitted ? "Sending..." : "Send"}
+        <button
+        type="submit"
+        disabled={sending}
+        className={`px-6 py-2 rounded transition 
+        ${sending 
+          ? "bg-gray-400 cursor-not-allowed" 
+          : "bg-indigo-600 text-white hover:bg-indigo-700"
+        }`}
+        >
+        {sending ? "Sending..." : "Send"}
         </button>
         </motion.form>
 
