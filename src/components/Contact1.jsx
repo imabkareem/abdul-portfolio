@@ -40,7 +40,7 @@ const Contact1 = () => {
 
       const uploadResults = await Promise.all(uploadPromises);
       
-      const fileUrls = uploadResults.map((res) => res.secure_url.replace("/upload/", "/upload/fl_attachment/"));
+      const fileUrls = uploadResults.map((res) => res.secure_url);
       
 
       const formattedLinks = fileUrls.join(", ");
@@ -65,11 +65,11 @@ const Contact1 = () => {
       );
 
       setSubmitted(true);
+      setSending(false);
       setFiles([]);
       setMessage("");
       setName("");
       setEmail("");
-      setSending(true);
       setTimeout(() => setSubmitted(false), 3000);
       
     } catch (error) {
