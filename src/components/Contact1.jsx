@@ -69,7 +69,9 @@ const Contact1 = () => {
       setMessage("");
       setName("");
       setEmail("");
+      setSending(true);
       setTimeout(() => setSubmitted(false), 3000);
+      
     } catch (error) {
       console.error("Failed to send message:", error);
       alert("Something went wrong. Try again later.");
