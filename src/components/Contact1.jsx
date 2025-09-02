@@ -65,12 +65,12 @@ const Contact1 = () => {
       );
 
       setSubmitted(true);
-      setSending(false);
       setFiles([]);
       setMessage("");
       setName("");
       setEmail("");
       setTimeout(() => setSubmitted(false), 3000);
+      setTimeout(() => sending(false), 1000);
       
     } catch (error) {
       console.error("Failed to send message:", error);
